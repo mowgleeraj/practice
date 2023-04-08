@@ -52,6 +52,9 @@ pipeline {
     post{        
         always{
             echo 'AL'
+        }  
+        failure{
+            echo 'failure'
         }
     }
 }
