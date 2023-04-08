@@ -23,7 +23,7 @@ pipeline {
                 username = 'raja'
             }
             steps {
-                sh 1'echo "${BUILD_ID}"'
+                sh 'echo "${BUILD_ID}"'
                 sh 'echo "${name}"'
                 sh 'echo "${username}"'
             }
@@ -40,7 +40,7 @@ pipeline {
                 ok "yes its Likith"
             }
             steps {
-                echo 'deploy on continue'
+                echo2 'deploy on continue'
             }
         }  
         stage('deploy') {
