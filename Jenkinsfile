@@ -40,12 +40,12 @@ pipeline {
                 ok "yes its Likith"
             }
             steps {
-                echo2 'deploy on continue'
+                echo 'deploy on continue'
             }
         }  
         stage('deploy') {
             steps {
-                echo1 'deploy on prod'
+                echo 'deploy on prod'
             }    
         }        
     }
