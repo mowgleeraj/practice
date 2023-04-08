@@ -49,13 +49,7 @@ pipeline {
             }    
         }        
     }
-    post{
-        always{
-            echo 'i will always run'
-        }  
-        failure{
-            echo 'failure'
-        }
+    post{        
         success{
             echo 'success'
         }
