@@ -35,6 +35,9 @@ pipeline {
             }
         }
         stage('continue') {
+            when {
+                parameter name: 'person', value: 'conti'
+            }
             input {
                 message "is it Likith?"
                 ok "yes its Likith"
@@ -44,6 +47,9 @@ pipeline {
             }
         }  
         stage('deploy') {
+            when {
+                parameter name: 'person', value: 'deploy'
+            }
             steps {
                 echo 'deploy on prod'
             }    
@@ -55,6 +61,9 @@ pipeline {
         }  
         failure{
             echo 'failure'
+        }
+        success{
+            echo 'suck'
         }
     }
 }
