@@ -23,7 +23,7 @@ pipeline {
                 username = 'raja'
             }
             steps {
-                sh 'echo "${BUILD_ID}"'
+                sh 1'echo "${BUILD_ID}"'
                 sh 'echo "${name}"'
                 sh 'echo "${username}"'
             }
@@ -50,8 +50,8 @@ pipeline {
         }        
     }
     post{        
-        failure{
-            echo 'FF'
+        always{
+            echo 'AL'
         }
     }
 }
